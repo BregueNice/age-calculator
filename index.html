@@ -16,27 +16,36 @@
     <main>
         <form>
             <div class="label">
-                <label for="dia">DAY</label>
+                <label for="dia" class="">D A Y</label>
                 <input type="number" name="" id="dia" placeholder="DD">
+                <i class="vermelho texto-campo-vazio__dia">This field is required</i>
+                <i class="vermelho texto-campo-invalido__dia">Must be a valid day</i>
             </div>
             <div class="label">
-                <label for="mes">Month</label>
-                <input type="text" placeholder="MM">
+                <label for="mes">M O N T H</label>
+                <input type="text" placeholder="MM" id="mes" class="">
+                <i class="vermelho texto-campo-vazio__mes">This field is required</i>
+                <i class="vermelho texto-campo-invalido__mes">Must be a valid month</i>
             </div>
             <div class="label">
-                <label for="ano">Year</label>
+                <label for="ano">Y E A R</label>
                 <input type="number" name="" id="ano" placeholder="YYYY">
+                <i class="vermelho texto-campo-vazio__ano">This field is required</i>
+                <i class="vermelho texto-campo-invalido__ano">Must be in past</i>
             </div>
-            <div class="linha"></div>
         </form>
-        <button><img src="./assets/img/icon-arrow.svg" alt=""></button>
-
-        <div>
+        <div class="linha__container">
+            <div class="linha"></div>
+            <button onclick="calcula()"><img src="./assets/img/icon-arrow.svg" alt=""></button>
+        </div>
+        <div class="resultado">
             <p><strong>--</strong> years</p>
             <p><strong>--</strong> months</p>
             <p><strong>--</strong> days</p>
         </div>
     </main>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>

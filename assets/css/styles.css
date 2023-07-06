@@ -34,6 +34,19 @@ input{
     width: 100px;
     height: 30px;
     border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid var(--cinza-claro);
+}
+
+input:focus{
+    outline-color: var(--roxo);
+    outline-offset: 0px;
+    border: 1px solid var(--roxo);
+}
+
+strong{
+    color: var(--roxo);
 }
 
 form{
@@ -71,4 +84,71 @@ main {
     border-radius: 15px;
     border-bottom-right-radius: 20%;
     padding: 50px;
+}
+
+.linha__container{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.linha{
+    background-color: var(--cinza-claro);
+    width: 550px;
+    height: 1px;
+}
+
+.resultado{
+    font-size: 70px;
+    font-weight: 800;
+    padding-top: 1rem;
+}
+
+.vermelho{
+    color: var(--vermelho);
+}
+
+.vermelho__borda{
+    border: 1px solid var(--vermelho);
+}
+
+.texto-campo-vazio__dia{
+    font-size: 10px;
+    opacity: 0.5;
+    font-weight: 700;
+    display: none;
+}
+.texto-campo-vazio__mes{
+    font-size: 10px;
+    opacity: 0.5;
+    font-weight: 700;
+    display: none;
+}
+.texto-campo-vazio__ano{
+    font-size: 10px;
+    opacity: 0.5;
+    font-weight: 700;
+    display: none;
+}
+
+.texto-campo-invalido__dia{
+    padding-top: 0.2rem;
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 400;
+    display: none;
+}
+.texto-campo-invalido__mes{
+    padding-top: 0.2rem;
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 400;
+    display: none;
+}
+.texto-campo-invalido__ano{
+    padding-top: 0.2rem;
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 400;
+    display: none;
 }
