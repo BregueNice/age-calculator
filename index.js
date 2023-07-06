@@ -16,24 +16,37 @@ function calcula() {
     let meses = (mesN.value - month);
     let dias = (diaN.value - day);
 
-
     if (mesN.value >= month && diaN.value >= day) {
-        if (mesN.value > month && diaN.value >= day) {
-            let resultadoM = ((meses) - 12) * -1;
+        let diasRRR = 30 - dias
+        if (diasRRR < 0) {
+            diaR.innerHTML = 31 - dias;
+        } else {
+            let resultadoM = (meses - 12) * -1;
             diaR.innerHTML = 31 - dias;
             anoR.innerHTML = idade;
             mesR.innerHTML = resultadoM;
         }
     }
     if (mesN.value < month) {
-        mesR.innerHTML = meses * (-1);
-        diaR.innerHTML = 30 - dias;
-        anoR.innerHTML = idade;
+        let diasRR = 31 - dias
+
+        anoR.innerHTML = idade + 1;
+        if (diasRR > 30) {
+            diaR.innerHTML = diasRR - 30;
+            meses--
+        } else {
+            diaR.innerHTML = diasRR;
+        }
+        mesR.innerHTML = meses * -1;
     }
     else {
-        anoR.innerHTML = idade++;
-        mesR.innerHTML = meses;
-        diaR.innerHTML = dias * (-1);
+        anoR.innerHTML = idade;
+        mesR.innerHTML = (meses - 13) * -1;
+        let diasRRR = 30 - dias
+        if (diasRRR < 0) {
+            diaR.innerHTML = 31 + dias;
+        } else {
+            diaR.innerHTML = dias * -1;
+        }
     }
-    console.log(meses);
 }
