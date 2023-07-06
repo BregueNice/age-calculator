@@ -12,21 +12,28 @@ const diaR = document.querySelector('#dia__resultado')
 
 
 function calcula() {
-    let idade = (year - anoN.value) -1;
+    let idade = (year - anoN.value) - 1;
     let meses = (mesN.value - month);
     let dias = (diaN.value - day);
 
 
     if (mesN.value >= month && diaN.value >= day) {
-        anoR.innerHTML = idade++;
-        if(mesN.value > month && diaN.value >= day){
-            mesR.innerHTML = meses-1;
-            diaR.innerHTML = dias;
+        if (mesN.value > month && diaN.value >= day) {
+            let resultadoM = ((meses) - 12) * -1;
+            diaR.innerHTML = 31 - dias;
+            anoR.innerHTML = idade;
+            mesR.innerHTML = resultadoM;
         }
-    } else {
+    }
+    if (mesN.value < month) {
+        mesR.innerHTML = meses * (-1);
+        diaR.innerHTML = 30 - dias;
+        anoR.innerHTML = idade;
+    }
+    else {
         anoR.innerHTML = idade++;
         mesR.innerHTML = meses;
-        diaR.innerHTML = dias*(-1);
+        diaR.innerHTML = dias * (-1);
     }
-    console.log(dias);
+    console.log(meses);
 }
