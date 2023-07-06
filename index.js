@@ -6,16 +6,27 @@ let anoN = document.querySelector('#ano');
 let mesN = document.querySelector('#mes');
 let diaN = document.querySelector('#dia');
 
-let idade = year - anoN;
+const anoR = document.querySelector('#ano__resultado')
+const mesR = document.querySelector('#mes__resultado')
+const diaR = document.querySelector('#dia__resultado')
 
-function calcula(){
-    
-    // if(mesN >= month && diaN >= day){
-    //     console.log(idade + 1);
-    // }else{
-    // }
-    console.log(idade);
-    console.log(year - anoN.value);
-    // console.log(mesN.value);
-    // console.log(diaN.value);
+
+function calcula() {
+    let idade = (year - anoN.value) -1;
+    let meses = (mesN.value - month);
+    let dias = (diaN.value - day);
+
+
+    if (mesN.value >= month && diaN.value >= day) {
+        anoR.innerHTML = idade++;
+        if(mesN.value > month && diaN.value >= day){
+            mesR.innerHTML = meses-1;
+            diaR.innerHTML = dias;
+        }
+    } else {
+        anoR.innerHTML = idade++;
+        mesR.innerHTML = meses;
+        diaR.innerHTML = dias*(-1);
+    }
+    console.log(dias);
 }
