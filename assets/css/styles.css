@@ -167,6 +167,10 @@ main {
     display: none;
 }
 
+p{
+    font-style: italic;
+}
+
 @media screen and (min-width: 375px) and (max-width: 1000px) {
     main {
         height: 320px;
