@@ -49,4 +49,9 @@ function calcula() {
             diaR.innerHTML = dias * -1;
         }
     }
+    if(mesN.value == month +1){
+        mesR.innerHTML = meses -1;
+        anoR.innerHTML = idade +1;
+    }
 }
+
