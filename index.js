@@ -32,8 +32,16 @@ function calcula() {
         invalido('invalido-m');
     } else if (diaN.value > 31) {
         invalido('invalido-d');
-    }
-    else {
+    } else if (anoN.value === '') {
+        document.getElementById("campo-vazio-y").style.display = "block";
+        avisos();
+    } else if (mesN.value === '') {
+        document.getElementById("campo-vazio-m").style.display = "block";
+        avisos();
+    } else if (diaN.value === '') {
+        document.getElementById("campo-vazio-d").style.display = "block";
+        avisos();
+    } else {
         removeI('invalido-a');
         removeI('invalido-m');
         removeI('invalido-d');
@@ -71,10 +79,10 @@ function calcula() {
             if (diasRRR < 0) {
                 diaR.innerHTML = 31 + dias;
             } else {
-                if(dias < 0){
-                    diaR.innerHTML = dias *-1;
-                }else{
-                diaR.innerHTML = 30 - dias;
+                if (dias < 0) {
+                    diaR.innerHTML = dias * -1;
+                } else {
+                    diaR.innerHTML = 30 - dias;
                 }
             }
         }
@@ -117,6 +125,6 @@ function invalido(id) {
     document.getElementById(id).style.display = "block";
 }
 
-function removeI(id){
+function removeI(id) {
     document.getElementById(id).style.display = "none";
 }
